@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differences Between Number and Bigint In Javascript</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</head>
+<body>
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://v3.flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="js.png" class="h-8" alt="Flowbite Logo" />
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+            <a href="assignment1.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">BigIint</a>
+            </li>
+            <li>
+            <a href="assignment2.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Operators</a>
+            </li>
+            <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+            </li>
+            <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+            </li>
+            <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
+        <table class="w-full text-sm text-left rtl:text-right text-body">
+            <thead class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
+                <tr>
+                    <th scope="col" class="px-6 py-3 font-medium">
+                        Feature
+                    </th>
+                    <th scope="col" class="px-6 py-3 font-medium">
+                        Number
+                    </th>
+                    <th scope="col" class="px-6 py-3 font-medium">
+                        BigInt
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-neutral-primary border-b border-default">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Purpose
+                    </th>
+                    <td class="px-6 py-4">
+                        Used for most normal numeric calculations in JavaScript.
+                    </td>
+                    <td class="px-6 py-4">
+                        Used when you need to work with extremely large integers accurately.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary border-b border-default">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Example
+                    </th>
+                    <td class="px-6 py-4">
+                        100, 25.5, -40
+                    </td>
+                    <td class="px-6 py-4">
+                        100n, 5000n, -40n
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Type
+                    </th>
+                    <td class="px-6 py-4">
+                        typeof 100 returns "number".
+                    </td>
+                    <td class="px-6 py-4">
+                        typeof 100n returns "bigint".
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Integers
+                    </th>
+                    <td class="px-6 py-4">
+                        Supports integers such as 10, 200, and -50.
+                    </td>
+                    <td class="px-6 py-4">
+                        Supports integers such as 10n, 200n, and -50n.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Decimals
+                    </th>
+                    <td class="px-6 py-4">
+                        Supports decimal values such as 10.5 and 99.99.
+                    </td>
+                    <td class="px-6 py-4">
+                        Does not support decimals. 10.5n is invalid.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Precision
+                    </th>
+                    <td class="px-6 py-4">
+                        Very large integers may be rounded or changed because of floating-point limitations.
+                    </td>
+                    <td class="px-6 py-4">
+                        Large integers remain exact, which is the main reason BigInt exists.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Addition and subtraction
+                    </th>
+                    <td class="px-6 py-4">
+                        Supports normal arithmetic such as 10 + 5.
+                    </td>
+                    <td class="px-6 py-4">
+                        Supports arithmetic such as 10n + 5n.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        JSON support
+                    </th>
+                    <td class="px-6 py-4">
+                        Can normally be used directly with JSON.stringify().
+                    </td>
+                    <td class="px-6 py-4">
+                        Cannot normally be serialized directly with JSON.stringify(); it is often converted 
+                        to a string first.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Best use cases
+                    </th>
+                    <td class="px-6 py-4">
+                        Prices, percentages, dimensions, scores, temperatures, calculations, 
+                        UI values, and most everyday programming.
+                    </td>
+                    <td class="px-6 py-4">
+                        Cryptography, blockchain, huge database IDs, very large counters, 
+                        and calculations requiring exact large integers.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        When to use it
+                    </th>
+                    <td class="px-6 py-4">
+                        Use Number unless you have a specific reason not to.
+                    </td>
+                    <td class="px-6 py-4">
+                        Use BigInt when an integer can exceed JavaScript's safe integer range and must remain exact.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

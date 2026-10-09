@@ -1,0 +1,227 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Differences Between Comparison Operators and Logical Operators In Javascript</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</head>
+<body>
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://v3.flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="js.png" class="h-8" alt="Flowbite Logo" />
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+            <a href="assignment1.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">BigIint</a>
+            </li>
+            <li>
+            <a href="assignment2.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Operators</a>
+            </li>
+            <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+            </li>
+            <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+            </li>
+            <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
+        <table class="w-full text-sm text-left rtl:text-right text-body">
+            <thead class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
+                <tr>
+                    <th scope="col" class="px-6 py-3 font-medium">
+                        Feature
+                    </th>
+                    <th scope="col" class="px-6 py-3 font-medium">
+                        Comparison Operators
+                    </th>
+                    <th scope="col" class="px-6 py-3 font-medium">
+                        Logical Operators
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-neutral-primary border-b border-default">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Purpose
+                    </th>
+                    <td class="px-6 py-4">
+                        Used to compare two values and determine whether a relationship between them is true or false.
+                    </td>
+                    <td class="px-6 py-4">
+                        Used to combine, modify, or evaluate one or more conditions in a JavaScript expression.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary border-b border-default">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Common operators
+                    </th>
+                    <td class="px-6 py-4">
+                        >, <, >=, <=, ==, ===, !=, !==
+                    </td>
+                    <td class="px-6 py-4">
+                        &&, ||, !
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Basic example
+                    </th>
+                    <td class="px-6 py-4">
+                        10 > 5 returns true because 10 is greater than 5.
+                    </td>
+                    <td class="px-6 py-4">
+                        10 > 5 && 20 > 10 returns true because both conditions are true.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Result
+                    </th>
+                    <td class="px-6 py-4">
+                        Comparison expressions usually return either true or false.
+                    </td>
+                    <td class="px-6 py-4">
+                        Logical expressions often return true or false when working with Boolean conditions, 
+                        although JavaScript can also return the actual operand value.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Greater than
+                    </th>
+                    <td class="px-6 py-4">
+                        10 > 5 returns true. The > operator checks whether the left value is greater than the right value.
+                    </td>
+                    <td class="px-6 py-4">
+                        Logical operators do not directly check whether one value is greater than another.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Less than
+                    </th>
+                    <td class="px-6 py-4">
+                        5 < 10 returns true. The < operator checks whether the left value is smaller than the right value.
+                    </td>
+                    <td class="px-6 py-4">
+                        Logical operators can combine a less-than comparison with another condition, such as age < 18 || age > 65.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Greater than or equal to
+                    </th>
+                    <td class="px-6 py-4">
+                        age >= 18 returns true when age is either 18 or greater than 18.
+                    </td>
+                    <td class="px-6 py-4">
+                        Can combine it with another condition, such as age >= 18 && hasID === true.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Less than or equal to
+                    </th>
+                    <td class="px-6 py-4">
+                        score <= 100 checks whether the score is 100 or lower.
+                    </td>
+                    <td class="px-6 py-4">
+                        Can combine it with another comparison, such as score >= 0 && score <= 100.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Strict equality
+                    </th>
+                    <td class="px-6 py-4">
+                        10 === 10 returns true, while 10 === "10" returns false because the data types are different.
+                    </td>
+                    <td class="px-6 py-4">
+                        Logical operators do not directly test equality, but equality expressions are commonly 
+                        used inside logical expressions.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Loose equality
+                    </th>
+                    <td class="px-6 py-4">
+                        10 == "10" returns true because JavaScript converts the types before comparing them.
+                    </td>
+                    <td class="px-6 py-4">
+                        Logical operators can combine loose equality conditions, although 
+                        strict equality is generally preferred.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Strict inequality
+                    </th>
+                    <td class="px-6 py-4">
+                        10 !== "10" returns true because a number and a string are different types.
+                    </td>
+                    <td class="px-6 py-4">
+                        Can be combined with other conditions, such as status !== "blocked" && age >= 18.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Logical AND &&
+                    </th>
+                    <td class="px-6 py-4">
+                        Comparison operators do not perform logical AND operations.
+                    </td>
+                    <td class="px-6 py-4">
+                        condition1 && condition2 returns a truthy result only when both conditions are truthy. 
+                        Example: age >= 18 && hasID === true.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Logical OR ||
+                    </th>
+                    <td class="px-6 py-4">
+                        Comparison operators do not perform logical OR operations.
+                    </td>
+                    <td class="px-6 py-4">
+                        condition1 || condition2 succeeds when at least one condition is truthy. 
+                        Example: hasCard || hasCash.
+                    </td>
+                </tr>
+                <tr class="bg-neutral-primary">
+                    <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                        Logical NOT !
+                    </th>
+                    <td class="px-6 py-4">
+                        Comparison operators normally compare one value with another value.
+                    </td>
+                    <td class="px-6 py-4">
+                        ! reverses the Boolean meaning of a condition. For example, !true becomes 
+                        false and !false becomes true.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

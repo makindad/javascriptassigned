@@ -1,0 +1,115 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: #111;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.thewholepage {
+  background: #fff;
+  border-radius: 28px;
+  padding: 56px 64px;
+  width: 100%;
+  max-width: 740px;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.intro {
+  color: #222;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+
+.form-things {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+}
+
+.field { display: flex; flex-direction: column; }
+.field.full { grid-column: 1 / -1; }
+
+
+.form-input {
+  font: inherit;
+  font-size: 17px;
+  padding: 18px 26px;
+  border: 2px solid #111;
+  border-radius: 20px;
+  background: #fff;
+}
+
+textarea.form-input { resize: vertical; min-height: 62px; }
+
+.form-input:focus {
+  border-color: #5b12c6;
+  box-shadow: 0 0 0 3px rgba(91, 18, 198, 0.15);
+}
+
+
+.form-input.invalid,
+.form-input.invalid:focus {
+  border-color: #e02424;
+  background: #fff5f5;
+  box-shadow: 0 0 0 3px #c31c1c26;
+}
+
+.error {
+  display: none;
+  color: #e02424;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin: 8px 0 0 14px;
+}
+.error::before { content: "⚠ "; }
+.error.show { display: block; }
+
+.consent {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin: 28px 0 24px;
+  line-height: 1.5;
+  color: #222;
+}
+
+.form-error, .success {
+  display: none;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.form-error { background: #fdecec; color: #c81e1e; }
+.success   { background: #ebf9f0; color: #137a3a; }
+.form-error.show, .success.show { display: block; }
+
+button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  background: #5b12c6;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+button:hover { background: #4a0ea3; }
+
+@media (max-width: 600px) {
+  .thewholepage { padding: 36px 20px; }
+  h1 { font-size: 32px; }
+  .form-things { grid-template-columns: 1fr; }
+}
